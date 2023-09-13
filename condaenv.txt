@@ -1,0 +1,14 @@
+conda create --prefix home/kavin/code/pythonenvs/00_objectdetection python=3.9 -y
+conda update -n base -c defaults conda
+source activate /home/kach271771/Desktop/pythonenvs/valeorad
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+
+#check:
+import torch
+torch.cuda.is_available()
+
+pip install -U pip
+pip3 install pkbar
+pip3 install tensorboard
+pip3 install pandas
+pip3 install shapely
