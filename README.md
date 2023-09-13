@@ -4,9 +4,7 @@
   <img src="images/intro_image_.png" width = 50% height = 50% div align=center>
 </p> 
 
-The fusion is performed using the labels in top-down polar
-domain, and our network focuses on segmenting the free drivable space, hence the name PolarSegFusionNet. This repository implements several design choices for deep learning based sensor fusion architectures of 4D radar and camera data, where the fusion is performed at different network depths from which an optimal architecture is derived. Early fusion using PolarSegFusionNet is shown in the above figure: (a) camera image, (b) ground truth in BEV, (c) 4D Radar-Camera early fusion with
-final prediction. The models are trained and tested on the [RADIal dataset](https://github.com/valeoai/RADIal/tree/main). The dataset can be downloaded
+The proposed method, named PolarSegFusionNet, is trained by using the image labels in the birds-eye-view polar domain. This repository implements several design choices for deep learning based sensor fusion architectures of 4D radar and camera data, where the fusion is performed at different network depths from which an optimal architecture is derived. Early fusion using PolarSegFusionNet is shown in the above figure: (a) camera image, (b) ground truth in BEV, (c) 4D Radar-Camera early fusion with final prediction. The models are trained and tested on the [RADIal dataset](https://github.com/valeoai/RADIal/tree/main). The dataset can be downloaded
 [here](https://github.com/valeoai/RADIal/tree/main#labels:~:text=Download%20instructions).
 
 The architectures with results can be briefly seen in the following video:
@@ -42,7 +40,7 @@ The configuration file is provided here: `config/config_PolarSegFusionNet.json`
 There are 8 architectures namely: only_camera, early_fusion, x0_fusion, x1_fusion, x2_fusion, x3_fusion, x4_fusion and after_decoder_fusion. 
 Meaning there is a possibility to train 8 models individually.
 
-In order to train camera only architecture set the following config parameters appropriately:
+For example, to train camera only architecture set the following config parameters appropriately:
 ```bash
 "SegmentationHead": "True",
 "radar_input": "False",
@@ -50,7 +48,7 @@ In order to train camera only architecture set the following config parameters a
 "fusion": "False"
 ```
 
-In order to train any fusion architecture set all the following to "True":
+And in order to train any fusion architecture set all the following to "True":
 ```bash
 "SegmentationHead": "True",
 "radar_input": "True",
@@ -58,7 +56,7 @@ In order to train any fusion architecture set all the following to "True":
 "fusion": "True"
 ```
 
-And set any one of the following to "True". With the following setting, "x2_fusion" architecture will be chosen:    
+Moreover, it is important to select the architecture for training. With the following setting, "x2_fusion" architecture will be chosen. To choose "early_fusion" architecture, simple set "early_fusion": "True" and the remaining to "False" and so on.    
 ```bash
    "architecture": {
         "only_camera": "False",
