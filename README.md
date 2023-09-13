@@ -9,7 +9,7 @@ The proposed method, named PolarSegFusionNet, is trained by using the image labe
 
 The architectures with results can be briefly seen in the following video:
 
-[![](video_.gif)](https://github.com/tue-mps/polarsegfusionnet/assets/95165774/8d5f8810-01bb-4295-a663-64130c1a2bfe)
+[![](video_.gif)](https://github.com/tue-mps/polarsegfusionnet/assets/95165774/4b704adb-3295-4af3-ae41-6727a7d12792)
 
 
 
