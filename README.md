@@ -84,6 +84,27 @@ To obtain qualitative results, please run:
 $ python 3-Test.py
 ```
 
+## Pretrained Checkpoints
+
+| Model | mIoU | Model params<br>(in millions) | Weights |
+|-----|-------|--------|--------|
+| Camera Only   |    81.61   |     <div align="center"> 3.28   | [Download](https://drive.google.com/uc?export=download&id=1Q-5R8R7J7oHDOKCOy1SSTaZy9Ns56e11)       |  
+| Early Raw  fusion  |    86.54   |     <div align="center"> 3.18   | [Download](https://drive.google.com/uc?export=download&id=1Pq4uok2OYFoaLtza0Q9TKbZ0dVDE_ECI)       | 
+| Pre-encoder (x0) block fusion    |  87.19     |   <div align="center"> 3.19     |  [Download](https://drive.google.com/uc?export=download&id=1hOgth4wjyBtHOhoGyq1dWiHkyGl7eYOc)      |
+| x1 feature block fusion   |   87.44    |    <div align="center"> 3.21    |  [Download](https://drive.google.com/uc?export=download&id=1aLXz95rqNWoY7Bp6rNJlFlp8OU5EWVPU)      |
+| x2 feature block fusion  |   87.50    |   <div align="center"> 3.37    |  [Download](https://drive.google.com/uc?export=download&id=1S0AMfqiPClHmm04LyZTIVwL3Ke1IeyUp)      |
+| x3 feature block fusion   |   87.74    |   <div align="center"> 3.93     |  [Download](https://drive.google.com/uc?export=download&id=1JERUJ7CNKKrrnyn7qGU3pcc9LhhMZJXl)      |
+| x4 feature block fusion   |   87.75    |   <div align="center"> 4.96     | [Download](https://drive.google.com/uc?export=download&id=1-hvjTqhI-sLVv2_2RZ-fBBog26zuGygN)       |
+| After Decoder fusion   |    87.81   |  <div align="center"> 6.52      | [Download](https://drive.google.com/uc?export=download&id=1gl8i_Wt06cX14Z5yltQihjZ6bxQ1OlaJ)       | 
+
+
+<details>
+  <summary>Table Notes</summary>
+  
+- Each of our models has been trained for ten times with a different random seed each time and the mean of the results are documented.
+- All checkpoints are trained to 100 epochs.
+</details>
+
 ## Acknowledgments
 - Thanks to Eindhoven University of Technology, Elektrobit Automotive GmbH and Transilvania University of Brașov for assistance in successfully achieving this.
 - The code base is influenced by Julien Rebut's RADIal paper. [Code](https://github.com/valeoai/RADIal/tree/main) [Paper](https://arxiv.org/pdf/2112.10646.pdf)
