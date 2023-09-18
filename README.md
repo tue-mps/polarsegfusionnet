@@ -9,9 +9,7 @@ The proposed method, named PolarSegFusionNet, is trained by using the image labe
 
 The architectures with results can be briefly seen in the following video:
 
-[![](video_.gif)](https://github.com/tue-mps/polarsegfusionnet/assets/95165774/4b704adb-3295-4af3-ae41-6727a7d12792)
-
-
+[![](video_.gif)](https://github.com/tue-mps/polarsegfusionnet/assets/95165774/b456b58a-e441-40c6-935c-32cdf31f4331)
 
 ## Setting up the virtual environment
 0. Clone the repo and set up the conda environment:
